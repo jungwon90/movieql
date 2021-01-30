@@ -1,0 +1,10 @@
+# Here, We define what the user is going to do 
+#    1. To get data from the database using Query
+#    2. To push data into the database -> mutation
+
+# Query -> to give data to the user
+# String -> response type. ! means It's not nullable
+type Query{
+    name: String!
+}
+
