@@ -4,7 +4,15 @@
 
 # Query -> to give data to the user
 # String -> response type. ! means It's not nullable
-type Query{
+
+type Person{
+    id: Int!
     name: String!
+    age: Int!
+    gender: String!
+}
+type Query{
+    people: [Person]!
+    person(id: Int!): Person #we might not find the person with the id so no '!' next to Person
 }
 
