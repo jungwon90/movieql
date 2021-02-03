@@ -18,4 +18,5 @@ type Query{
 # Let's define mutations (when we change the data inside database)
 type Mutation {
     addMovie(name: String!, score: Int!): Movie!
+    deleteMovie(id: Int!): Boolean!
 }

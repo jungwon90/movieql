@@ -1,7 +1,7 @@
 
 //resolves the Query
 //basically programming how we are going to send the response to the user
-import {getById, getMovies, addMovie} from "./db";
+import {getById, getMovies, addMovie, deleteMovie} from "./db";
 
 const resolvers = {
     //write a resolvers for Query
@@ -10,7 +10,8 @@ const resolvers = {
         movie: (_, {id}) => getById(id)
     },
     Mutation: {
-        addMovie: (_, {name, score}) => addMovie(name, score)
+        addMovie: (_, {name, score}) => addMovie(name, score),
+        deleteMovie: (_, {id}) => deleteMovie(id)
     }
 };
 
