@@ -9,3 +9,6 @@ an already existing REST API with GraphQL
 ### Technologies required 
 Node.js, Javascript, GraphQL
 Libraries/Framework: Graphql-yoga
+
+### Data
+YTS.MX API

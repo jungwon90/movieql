@@ -7,16 +7,15 @@
 
 type Movie{
     id: Int!
-    name: String!
-    score: Int!
+    title: String!
+    rating: Float!
+    summary: String!
+    language: String!
+    medium_cover_image: String!
 }
 type Query{
     movies: [Movie]!
-    movie(id: Int!): Movie #we might not find the person with the id so no '!' next to Person
+    #we might not find the person with the id so no '!' next to Person
 }
 
 # Let's define mutations (when we change the data inside database)
-type Mutation {
-    addMovie(name: String!, score: Int!): Movie!
-    deleteMovie(id: Int!): Boolean!
-}
