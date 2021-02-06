@@ -1,12 +1,14 @@
 
 //resolves the Query
 //basically programming how we are going to send the response to the user
-import { getMovies } from "./db";
+import { getMovies, getMovie, getSuggestions } from "./db";
 
 const resolvers = {
     //write a resolvers for Query
     Query: {
-        movies: () => getMovies()
+        movies: (_, {limit, rating}) => getMovies(limit, rating),
+        movie: (_, {id}) => getMovie(id),
+        suggestions: (_, {id}) => getSuggestions(id)
     }
 };
 
